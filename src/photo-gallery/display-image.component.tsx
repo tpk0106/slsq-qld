@@ -43,22 +43,23 @@ const DisplayImage = ({ images, setParentState }: imageSet) => {
     setOpen(false);
     setParentState();
   };
+
+  if (!open) return null;
+
   return (
-    showGallery && (
-      <div>
-        <Lightbox
-          open={open}
-          close={() => handleGalleryClose()}
-          plugins={[PLUGIN_ZOOM]}
-          slides={imageSource}
-          //plugins={[Inline, Zoom]}
-          // zoom={{ ref: zoomRef }}
-          // inline={{
-          //   style: { width: '100%', maxWidth: '900px', aspectRatio: '3 / 2' },
-          // }}
-        />
-      </div>
-    )
+    <div>
+      <Lightbox
+        open={open}
+        close={() => handleGalleryClose()}
+        plugins={[PLUGIN_ZOOM]}
+        slides={imageSource}
+        //plugins={[Inline, Zoom]}
+        // zoom={{ ref: zoomRef }}
+        // inline={{
+        //   style: { width: '100%', maxWidth: '900px', aspectRatio: '3 / 2' },
+        // }}
+      />
+    </div>
   );
 };
 
