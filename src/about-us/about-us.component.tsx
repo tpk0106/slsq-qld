@@ -9,13 +9,13 @@ const AboutUs = () => {
                 <p className="mb-3">Rules & Objectives</p>
                 <p
                   id="rules"
-                  className="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)]"
+                  className="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] text-center"
                 >
                   We are a community organisation dedicated to the celebration and understanding of
                   Sri Lankan culture within Queensland, Australia. As such, we have developed the
                   following seven principles.
                 </p>
-                <p className="text-base md:text-[20px] lg:text-[30px] p-5">
+                <p className="text-base md:text-[20px] lg:text-[30px] p-5 text-center">
                   The goals of the Sri Lanka Society of Queensland are:
                 </p>
               </div>

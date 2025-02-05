@@ -5,10 +5,35 @@ import { getFilenameFromUrl, type PDFDocumentProxy } from 'pdfjs-dist';
 
 import { MagnifyingGlassMinus, MagnifyingGlassPlus, Close } from './icons.component';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
+//  support site
+// https://github.com/wojtekmaj/react-pdf
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//   'pdfjs-dist/build/pdf.worker.min.mjs',
+//   import.meta.url,
+// ).toString();
+
+// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+//   `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`,
+// ).toString();
+
+// console.log('version : ', pdfjs.version);
+
+// pdfjs.GlobalWorkerOptions.workerSrc = require(
+//   `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`,
+// );
+
+//PDFWorker.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+
+//import { pdfjs } from 'react-pdf';
+
+// pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+//pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.worker.min.js`;
+
+// import * as pdfjsLib from 'pdfjs-dist/build/pdf'
+// pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`
 
 const maxWidth = 900;
 
@@ -25,6 +50,7 @@ type pdf = { pdfurl: string; setParentState: () => void };
 
 const PDFGenerator = ({ pdfurl, setParentState }: pdf) => {
   const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
 
@@ -133,6 +159,7 @@ const PDFGenerator = ({ pdfurl, setParentState }: pdf) => {
                       <Page
                         key={`page_${index + 1}`}
                         pageNumber={index + 1}
+                        // pageNumber={pageNumber}
                         width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
                         scale={zoom}
                         className=""

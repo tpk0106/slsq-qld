@@ -44,9 +44,9 @@ const Header = () => {
             laptop width >= 1024px          
         */}
             <div className="flex-1 w-[100%] mt-5">
-              <nav className="flex flex-row flex-1 items-center justify-between w-full">
-                <div className="hidden md:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold">
-                  <ul className="flex flex-1 text-center items-center justify-between">
+              <div className="flex flex1-row flex1-col flex-1 items-center justify-between w-full border-4 border-red-500">
+                <nav className="hidden md:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold border-r-8 border-green-600 m1-1">
+                  <ul className="flex flex-1 text-center items1-center justify-between">
                     {navbarData.map((menu) => {
                       return (
                         <Menu
@@ -59,7 +59,7 @@ const Header = () => {
                       );
                     })}
                   </ul>
-                </div>
+                </nav>
 
                 {/* mobile main menu */}
 
@@ -83,7 +83,7 @@ const Header = () => {
                     })}
                   </ul>
                 </nav>
-              </nav>
+              </div>
               <Outlet />
               <Footer />
             </div>
