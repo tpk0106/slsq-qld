@@ -1,8 +1,8 @@
-import './App.css';
-//import '.styles.css';
-import Header from './navigation/header.component';
+import './index.css';
+
 import { Route, Routes } from 'react-router-dom';
 
+import Header from './navigation/header.component';
 import AboutUs from './about-us/about-us.component';
 import ContactUs from './contact-us/contact-us.component';
 import Home from './home/home.component';

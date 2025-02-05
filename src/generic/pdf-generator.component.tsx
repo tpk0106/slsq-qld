@@ -58,9 +58,8 @@ const PDFGenerator = ({ pdfurl, setParentState }: pdf) => {
     setParentState();
   };
 
-  type ZoomLevel = 1 | 2 | 3;
-
-  const handlePdfScaleUp = (scale: ZoomLevel) => {};
+  // type ZoomLevel = 1 | 2 | 3;
+  // const handlePdfScaleUp = (scale: ZoomLevel) => {};
 
   const handlePdfZoomIn = () => {
     zoom.toFixed(1);
@@ -69,7 +68,7 @@ const PDFGenerator = ({ pdfurl, setParentState }: pdf) => {
     if (zoom < 1) {
       setZoom(1);
     }
-    console.log(zoom);
+
     let increaseValue = 0.5;
     increaseValue.toFixed(1);
 

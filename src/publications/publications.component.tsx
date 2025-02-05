@@ -4,35 +4,35 @@ import { PUBLICATIONS } from '../data/publications';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-import constitution_pdf from '../assets/publications/constitution/Sri-Lanka-Constitution.pdf';
+// import constitution_pdf from '../assets/publications/constitution/Sri-Lanka-Constitution.pdf';
 import Membership_form_Revised from '../assets/publications/Membership-Form-Revised.pdf';
 import NominationForm from '../assets/publications/NominationForm.doc';
 import ProxyForm from '../assets/publications/ProxyForm.doc';
 import Download from '../generic/download.component';
 
 const Publications = () => {
-  const handleDownloadConstitutionClick = () => {
-    // const ele = e.target as HTMLElement;
-    // let url = ele.attributes.item(0)?.value.substring(1);
+  // const handleDownloadConstitutionClick = () => {
+  //   // const ele = e.target as HTMLElement;
+  //   // let url = ele.attributes.item(0)?.value.substring(1);
 
-    fetch(constitution_pdf).then((res) => {
-      res.blob().then((blob) => {
-        const fileUrl = window.URL.createObjectURL(blob);
-        let aLink = document.createElement('a');
-        aLink.href = fileUrl;
-        aLink.download = 'constitution';
-        aLink.click();
-      });
-    });
+  //   fetch(constitution_pdf).then((res) => {
+  //     res.blob().then((blob) => {
+  //       const fileUrl = window.URL.createObjectURL(blob);
+  //       const aLink = document.createElement('a');
+  //       aLink.href = fileUrl;
+  //       aLink.download = 'SLSQ-Constitution';
+  //       aLink.click();
+  //     });
+  //   });
 
-    return;
-  };
+  //   return;
+  // };
 
   const handleDownloadMembershipFormClick = () => {
     fetch(Membership_form_Revised).then((res) => {
       res.blob().then((blob) => {
         const fileUrl = window.URL.createObjectURL(blob);
-        let aLink = document.createElement('a');
+        const aLink = document.createElement('a');
         aLink.href = fileUrl;
         aLink.download = 'Membership-Form-Revised';
         aLink.click();
@@ -44,7 +44,7 @@ const Publications = () => {
     fetch(NominationForm).then((res) => {
       res.blob().then((blob) => {
         const fileUrl = window.URL.createObjectURL(blob);
-        let aLink = document.createElement('a');
+        const aLink = document.createElement('a');
         aLink.href = fileUrl;
         aLink.download = 'NominationForm';
         aLink.click();
@@ -56,7 +56,7 @@ const Publications = () => {
     fetch(ProxyForm).then((res) => {
       res.blob().then((blob) => {
         const fileUrl = window.URL.createObjectURL(blob);
-        let aLink = document.createElement('a');
+        const aLink = document.createElement('a');
         aLink.href = fileUrl;
         aLink.download = 'ProxyForm';
         aLink.click();
@@ -80,7 +80,7 @@ const Publications = () => {
                   return (
                     <>
                       <tr className="bg-[#e4cfff] h-10 sm:text-table-body-mobile md:text-table-body-tablet lg:text-table-body-laptop">
-                        <td colSpan={4} className="text-center">
+                        <td colSpan={4} className="text-center" key={publication.year}>
                           {publication.year}
                         </td>
                       </tr>
@@ -89,7 +89,7 @@ const Publications = () => {
                         <div className="flex flex-col sm:justify-around sm:text-center md:flex-row">
                           {publication.months.map((m) => {
                             return (
-                              <td className="text-center flex-col md:flex-row my-3">
+                              <td className="text-center flex-col md:flex-row my-3" key={m.date}>
                                 <Publication
                                   year={Number(publication.year)}
                                   months={publication.months}

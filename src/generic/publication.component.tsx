@@ -28,7 +28,6 @@ const Publication = ({ ...publication }: publication) => {
 
   const tags = [];
   const num = parseInt(publication.year.toString());
-  console.log(num);
 
   if (isNaN(num)) {
     const atag = (

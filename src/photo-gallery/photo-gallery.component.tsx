@@ -1,5 +1,4 @@
 import { MouseEvent, useState } from 'react';
-import { renderToString } from 'react-dom/server';
 
 import DisplayImage from './display-image.component';
 import {
@@ -27,9 +26,10 @@ const PhotoGallery = () => {
   const [showGallery, setShowGallery] = useState(false);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
-    console.log('clciked !!');
     const galleryname = event.currentTarget as HTMLElement;
+
     imagesSet = [];
+
     switch (galleryname.textContent?.trim()) {
       case 'Sinhala And Tamil New Year 2021':
         imagesSet = SinhalaNewYear2021;
@@ -99,7 +99,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sinhala And Tamil New Year 2021"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)]  hover:cursor-pointer"
                 />
@@ -107,7 +107,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Members And Friends Lunch 2020"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)]  hover:cursor-pointer"
                 />
@@ -115,7 +115,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Dance School Opening Ceremony 2020"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)]  hover:cursor-pointer"
                 />
@@ -124,7 +124,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Founders Day Celebrations 2019"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)]  hover:cursor-pointer"
                 />
@@ -133,7 +133,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sri Lankan New Year Cultural Concert 2018"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -142,7 +142,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="National Dance Troupe 2017"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -150,7 +150,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Book Launch -Dr Nimal Sedera 2017"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -159,7 +159,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sri Lankan New Year Cultural Concert 2017"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -168,7 +168,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sri Lankan New Year Cultural Concert 2016"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -177,7 +177,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption={'SLSQ Invited to Bhutan King’s 41st Birthday Celebrations'}
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -186,7 +186,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sri Lankan New Year Cultural Concert 2015"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -195,7 +195,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Clean Water Appeal"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -204,7 +204,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Members and Friends Get-Together"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -213,7 +213,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Talk by Tina Faulk"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
@@ -222,7 +222,7 @@ const PhotoGallery = () => {
               <div>
                 <Button
                   onClick={(e) => handleClick(e)}
-                  icon={undefined}
+                  icon={null}
                   caption="Sri Lankan New Year Cultural Concert 2014"
                   classname="text-base md:text-[20px] lg:text-[30px] mb-5 text-white drop-shadow-[1px_1px_rgba(0,0,0,1)] hover:drop-shadow-[2px_2px_rgba(0,0,0,.5)] hover:cursor-pointer"
                 />
