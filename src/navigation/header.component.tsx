@@ -25,7 +25,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="flex w-full justify-center mb-2">
+            <div className="flex w-full md:hidden justify-center mb-2 border-4 border-red-400">
               <label
                 className="flex justify-end md:hidden mt-5 mr-0 z-50"
                 onClick={() => handleMenuClose()}
@@ -34,7 +34,7 @@ const Header = () => {
               </label>
             </div>
 
-            <div className="flex w-full justify-center ">
+            <div className="flex w-full justify-center md:hidden">
               <div className="flex justify-center w-8/12 m-auto border-b-1 border-gray-800 mt-5"></div>
             </div>
 
@@ -65,12 +65,12 @@ const Header = () => {
 
                 <nav
                   id="mobileMenu"
-                  className="md:hidden flex-1 w1-1/3 w-full text-menu-black-dark text-2xl z-50 absolute left-16 1right-32 -1right-0 top-40"
+                  className="flex flex-col md:hidden lg:hidden flex1-1 w1-2/3 w-full text-menu-black-dark text-2xl z-50 absolute left-16 1right-32 -1right-0 top-60"
                 >
                   <ul>
                     {navbarData.map((menu) => {
                       return (
-                        <div className="cursor-pointer text-xs bg-black text-[#a855f7] text-center w-3/4 hover:text-[#fff]">
+                        <div className="cursor-pointer text-xs bg-gray-400 text-[#a85545] text-center w-3/4 hover:text-[#fff]">
                           <Menu
                             label={menu.label}
                             submenu={menu.subMenus}
