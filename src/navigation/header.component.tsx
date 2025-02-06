@@ -18,14 +18,14 @@ const Header = () => {
     <>
       <div className="flex w-[100%] overflow-hidden">
         <div className="flex w-full">
-          <div className="container flex-wrap w-full flex 1 1 100%">
+          <div className="container1 flex-wrap w-full flex 1 1 100%">
             <div className="w-[100%] flex justify-around pt-4">
               <Link to="/">
                 <img src={logo} alt="Sri Lanka Society of Queensland Inc logo" />
               </Link>
             </div>
 
-            <div className="flex w-full md:hidden justify-center mb-2 border-4 border-red-400">
+            <div className="flex w-full md:hidden justify-center mb-2 border-4 border-blue-400">
               <label
                 className="flex justify-end md:hidden mt-5 mr-0 z-50"
                 onClick={() => handleMenuClose()}
@@ -44,8 +44,8 @@ const Header = () => {
             laptop width >= 1024px          
         */}
             <div className="flex-1 w-[100%] mt-5">
-              <div className="flex flex1-row flex1-col flex-1 items-center justify-between w-full border-4 border-red-500">
-                <nav className="hidden md:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold border-r-8 border-green-600 m1-1">
+              <div className="flex flex1-row flex1-col flex-1 items-center justify-between w1-full border-4 border-red-500">
+                <nav className="hidden sm:max-sm:hidden sm:max-md:hidden md:flex lg:flex @3xl:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold border-r-8 border-green-600 m1-1">
                   <ul className="flex flex-1 text-center items1-center justify-between">
                     {navbarData.map((menu) => {
                       return (

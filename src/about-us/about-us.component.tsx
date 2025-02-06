@@ -6,7 +6,7 @@ const AboutUs = () => {
           <div className="w-[90%] flex flex-col flex-wrap md:flex-col lg:flex-row items-center content-between mt-16 sm:mt-3 mx-[5%]">
             <div className="flex-1 text-3xl mx-5 p-[1em]">
               <div className="flex flex-col items-center content-center">
-                <p className="mb-3">Rules & Objectives</p>
+                <p className="text-base md:text-[20px] lg:text-[30px] mb-3">Rules & Objectives</p>
                 <p
                   id="rules"
                   className="text-base md:text-[20px] lg:text-[30px] mb-5 drop-shadow-[1px_1px_rgba(0,0,0,1)] text-center"

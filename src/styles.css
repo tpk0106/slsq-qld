@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-/* @import 'tailwindcss/preflight';
-@import 'tailwindcss/utilities'; */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -87,10 +85,13 @@ body {
   }
 } */
 
-/* this is used by react PDF */ /* body { margin: 0; background-color: #525659; font-family: Segoe UI,
+/* this is used by react PDF */
+/* body { margin: 0; background-color: #525659; font-family: Segoe UI,
   Tahoma,
   sans-serif; } .Example input,
-  .Example button { font: inherit; } /* .Example header { background-color: #0f568d; box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) ; padding: 20px; color: white; } */
+  .Example button { font: inherit; } /* .Example header { background-color: #0f568d; box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) ; padding: 20px; color: white; } 
+*/
+
 .pdf_header header h1 {
   font-size: inherit;
   margin: 0;

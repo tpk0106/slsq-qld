@@ -6,10 +6,10 @@ const ContactUs = () => {
   return (
     <>
       <div className="m-auto w-full">
-        <div className="w-[80%] m-auto">
-          <div className="text-3xl w-full mt-5 h-84">
-            <div className="flex w-[60%] m-auto text-base md:text-2xl sm:flex-row items-center">
-              <div className="basis-1/6 m-auto">
+        <div className="flex flex-col justify-around items-center">
+          <div className="text-3xl w-full mt-5 h-84 pt-5">
+            <div className="flex w-[50%] m-auto justify-around text-base md:text-2xl sm:flex-row items-center">
+              <div className="px-3 md:p-0 m-auto">
                 <FontAwesomeIcon icon={faAddressCard} title="Our Physical Address" />
               </div>
               <div className="basis-5/6 my-3">
@@ -19,8 +19,8 @@ const ContactUs = () => {
                 <p className="m-auto">CITY EAST QLD 4002.</p>
               </div>
             </div>
-            <div className="flex w-[60%] m-auto text-base md:text-2xl sm:flex-row items-center">
-              <div className="basis-1/6 m-auto">
+            <div className="flex w-[50%] m-auto text-base md:text-2xl sm:flex-row items-center">
+              <div className="px-3 md:p-0 m-auto">
                 <FontAwesomeIcon icon={faEnvelope} title="Our Email address" />
               </div>
               <div className="basis-5/6 my-3">
