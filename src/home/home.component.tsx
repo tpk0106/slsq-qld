@@ -1,9 +1,9 @@
 const Home = () => {
   return (
-    <div className="flex m-auto w-[100%]  border-2 border-amber-600">
+    <div className="flex m-auto w-[100%]">
       <div className="flex justify-around">
         <section className="pt-10 pb-10">
-          <div className="w-[100%] m-auto sm:text-body-mobile md:text-body-tablet lg:text-body-laptop p-10 sm:leading-relaxed lg:leading-loose text-center border-2 border-amber-600">
+          <div className="w-[100%] m-auto sm:text-body-mobile md:text-body-tablet lg:text-body-laptop p-10 sm:leading-relaxed lg:leading-loose text-center">
             <div className="sm:text-body-laptop md:text-[2.1em] lg:text-[2.3em] pt-10 pb-10 text-center">
               Welcome! ආයුබෝවන් , வணக்கம், اَلسَّلامُ عَلَيْكُم and G’day
             </div>

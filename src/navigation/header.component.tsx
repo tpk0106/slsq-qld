@@ -25,9 +25,9 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="flex w-full md:hidden justify-center mb-2 border-4 border-blue-400">
+            <div className="flex w-full md:hidden justify-center mb-2">
               <label
-                className="flex justify-end md:hidden mt-5 mr-0 z-50"
+                className="flex justify-end md:hidden mt-1 mr-0 z-50"
                 onClick={() => handleMenuClose()}
               >
                 <FontAwesomeIcon icon={faAddressBook} className="text-2xl" />
@@ -44,9 +44,9 @@ const Header = () => {
             laptop width >= 1024px          
         */}
             <div className="flex-1 w-[100%] mt-5">
-              <div className="flex flex1-row flex1-col flex-1 items-center justify-between w1-full border-4 border-red-500">
-                <nav className="hidden sm:max-sm:hidden sm:max-md:hidden md:flex lg:flex @3xl:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold border-r-8 border-green-600 m1-1">
-                  <ul className="flex flex-1 text-center items1-center justify-between">
+              <div className="flex flex-1 items-center justify-between">
+                <nav className="hidden sm:max-sm:hidden sm:max-md:hidden md:flex lg:flex @3xl:flex flex-1 items-center justify-around border-[1px] w-full text-sm mx-[10%] rounded-[14px] bg-[#000] text-[#a855f7] font-semibold">
+                  <ul className="flex flex-1 text-center justify-between">
                     {navbarData.map((menu) => {
                       return (
                         <Menu
@@ -63,14 +63,14 @@ const Header = () => {
 
                 {/* mobile main menu */}
 
-                <nav
+                {/* <nav
                   id="mobileMenu"
                   className="flex flex-col md:hidden lg:hidden flex1-1 w1-2/3 w-full text-menu-black-dark text-2xl z-50 absolute left-16 1right-32 -1right-0 top-60"
                 >
                   <ul>
                     {navbarData.map((menu) => {
                       return (
-                        <div className="cursor-pointer text-xs bg-gray-400 text-[#a85545] text-center w-3/4 hover:text-[#fff]">
+                        <div className="cursor-pointer text-xs bg-gray-400 text-[#a855f7] text-center w-3/4 hover:text-[#fff]">
                           <Menu
                             label={menu.label}
                             submenu={menu.subMenus}
@@ -82,7 +82,7 @@ const Header = () => {
                       );
                     })}
                   </ul>
-                </nav>
+                </nav> */}
               </div>
               <Outlet />
               <Footer />
@@ -90,6 +90,28 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* mobile menu */}
+      <nav
+        id="mobileMenu"
+        className="flex flex-col md:hidden lg:hidden flex1-1 w-full text-menu-black-dark text-2xl z-50 absolute left-16 1right-32 -1right-0 top-40"
+      >
+        <ul>
+          {navbarData.map((menu) => {
+            return (
+              <div className="cursor-pointer text-xs bg-black text-[#a855f7] text-center w-3/4 hover:text-[#fff]">
+                <Menu
+                  label={menu.label}
+                  submenu={menu.subMenus}
+                  routerLink={menu.routerLink}
+                  icon={menu.icon}
+                  key={menu.routerLink}
+                />
+              </div>
+            );
+          })}
+        </ul>
+      </nav>
     </>
   );
 };
